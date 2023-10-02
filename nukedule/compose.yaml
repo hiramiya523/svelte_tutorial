@@ -1,0 +1,18 @@
+services:
+    work:
+        build:
+            context: ./docker/workspase
+            args:
+                - UID=${UID:-1000}
+                - GID=${GID:-1000}
+                - HOST_DOCKER_GROUP_GID=1001
+        init: true
+        hostname: workpace
+        ports: 
+        - ${BUIND_IP:-127.0.0.1}:5173:5173
+        volumes:
+            - /var/run/docker.sock:/var/run/docker-host.sock
+            - .:/workspace
+        tty: true
+        environment:
+            TZ: Asia/Tokyo
