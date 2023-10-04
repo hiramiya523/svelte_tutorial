@@ -14,5 +14,6 @@ export const load = (async({fetch}) => {
     users
   };
 }) satisfies PageLoad
+// }) satisfies PageServerLoad
 
 // satisfies オペレータ

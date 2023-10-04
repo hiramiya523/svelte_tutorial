@@ -16,3 +16,15 @@ services:
         tty: true
         environment:
             TZ: Asia/Tokyo
+
+    web:
+      build: 
+        context: ./docker/web
+        args:
+          - UID=${UID:-1000}
+          - GID=${GID:-1000}
+      ports: 
+        - ${BUIND_IP:-127.0.0.1}:80:80
+        - ${BUIND_IP:-127.0.0.1}:8080:8080
+      volumes:
+        - ./docker/web/index.html:/usr/share/nginx/html/index.html

@@ -24,6 +24,10 @@
   {/each} -->
 
   {#each data.users as user}
-    <li>{user.name}</li>
+    <li>
+      <a href={`/user/${user.id}`}>
+        {user.name}
+      </a>
+    </li>
   {/each}
 </ul>
