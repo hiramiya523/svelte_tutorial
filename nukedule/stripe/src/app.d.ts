@@ -9,4 +9,10 @@ declare global {
 	}
 }
 
-export {};
+declare class Product {
+  id: string // Stripe ID
+  name: string
+  price:number
+}
+
+// export {};
