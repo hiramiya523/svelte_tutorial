@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CodeSnippetCard from '../CodeSnippetCard.svelte';
-	import { snippetStore } from '../SnippetStore';
+	import { addSnippet, snippetStore } from '../SnippetStore';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -44,6 +44,12 @@
 					bind:value={formData.code}
 				/>
 			</label>
+			<button
+				type="button"
+				class="btn btn-sm variant-filled-primary"
+				on:click={() => addSnippet(formData)}
+				>Create Snippet
+			</button>
 		</div>
 		<div class="text-center py-6">
 			<h2>My Code Sniipets</h2>
