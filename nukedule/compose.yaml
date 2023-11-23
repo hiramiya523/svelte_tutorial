@@ -10,6 +10,7 @@ services:
         hostname: workpace
         ports: 
         - ${BUIND_IP:-127.0.0.1}:5173:5173
+        - ${BUIND_IP:-127.0.0.1}:5555:5555
         volumes:
             - /var/run/docker.sock:/var/run/docker-host.sock
             - .:/workspace

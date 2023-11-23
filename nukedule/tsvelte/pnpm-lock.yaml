@@ -4,6 +4,14 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@prisma/client':
+    specifier: 5.6.0
+    version: 5.6.0(prisma@5.6.0)
+  bun:
+    specifier: ^1.0.13
+    version: 1.0.13
+
 devDependencies:
   '@playwright/test':
     specifier: ^1.28.1
@@ -35,6 +43,9 @@ devDependencies:
   prettier-plugin-svelte:
     specifier: ^2.10.1
     version: 2.10.1(prettier@2.8.8)(svelte@4.2.1)
+  prisma:
+    specifier: ^5.6.0
+    version: 5.6.0
   svelte:
     specifier: ^4.0.5
     version: 4.2.1
@@ -387,6 +398,54 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@oven/bun-darwin-aarch64@1.0.13:
+    resolution: {integrity: sha512-msb1ikpJSgmmhbV2mN8xrTUVvVmi4MVWTlixMdX5zZkI1po5wjNLiUnwNzHqPpUSolsXcmMZHtczYKwmgL+TUA==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@oven/bun-darwin-x64-baseline@1.0.13:
+    resolution: {integrity: sha512-lCg7o013uVZG7t8jpidqCxgR1JSX0q/SrlDrpOwcTHuewWip0KwshM5H8HjXGmFaf3aIO6Y9/kBmNSU5xjqWHQ==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@oven/bun-darwin-x64@1.0.13:
+    resolution: {integrity: sha512-zIAOVyUJRDPGZroQEn46Hu0k2lZm2a1G3fQ0SQUqI9DIKS317HzrdC0SMAeSLcOVVdyfvF9VXernwcyo/ElldQ==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@oven/bun-linux-aarch64@1.0.13:
+    resolution: {integrity: sha512-srX4XwgA5al4GbIz9JlczJCEFgkkSmCJyiO47/oVefbO2h/WeFR7+uod/INQee+XiRSQsp/Wkdm4TwGtjm913Q==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@oven/bun-linux-x64-baseline@1.0.13:
+    resolution: {integrity: sha512-XWIndF9jeqvZNrPguAG4jIq0sncdz90bM8Um2DoyBwweUeZj8z44hHbmkVCXarlNbyicEMp/LACatVC7hQ/hwQ==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@oven/bun-linux-x64@1.0.13:
+    resolution: {integrity: sha512-RmYuruKbySfyAJaptTZbYFjMAQEPINRI+XT/JTSqTc6vzujA53Z06S9G6sc3oEp3ws8wPH+ILkrOP8A0FbxWEg==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /@playwright/test@1.38.1:
     resolution: {integrity: sha512-NqRp8XMwj3AK+zKLbZShl0r/9wKgzqI/527bkptKXomtuo+dOjU9NdMASQ8DNC9z9zLOMbG53T4eihYr3XR+BQ==}
     engines: {node: '>=16'}
@@ -398,6 +457,28 @@ packages:
   /@polka/url@1.0.0-next.23:
     resolution: {integrity: sha512-C16M+IYz0rgRhWZdCmK+h58JMv8vijAA61gmz2rspCSwKwzBebpdcsiUmwrtJRdphuY30i6BSLEOP8ppbNLyLg==}
     dev: true
+
+  /@prisma/client@5.6.0(prisma@5.6.0):
+    resolution: {integrity: sha512-mUDefQFa1wWqk4+JhKPYq8BdVoFk9NFMBXUI8jAkBfQTtgx8WPx02U2HB/XbAz3GSUJpeJOKJQtNvaAIDs6sug==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 5.6.0-32.e95e739751f42d8ca026f6b910f5a2dc5adeaeee
+      prisma: 5.6.0
+    dev: false
+
+  /@prisma/engines-version@5.6.0-32.e95e739751f42d8ca026f6b910f5a2dc5adeaeee:
+    resolution: {integrity: sha512-UoFgbV1awGL/3wXuUK3GDaX2SolqczeeJ5b4FVec9tzeGbSWJboPSbT0psSrmgYAKiKnkOPFSLlH6+b+IyOwAw==}
+    dev: false
+
+  /@prisma/engines@5.6.0:
+    resolution: {integrity: sha512-Mt2q+GNJpU2vFn6kif24oRSBQv1KOkYaterQsi0k2/lA+dLvhRX6Lm26gon6PYHwUM8/h8KRgXIUMU0PCLB6bw==}
+    requiresBuild: true
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -783,6 +864,21 @@ packages:
   /buffer-crc32@0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
     dev: true
+
+  /bun@1.0.13:
+    resolution: {integrity: sha512-Yso47G+v88qiJR3eQv65ITKubOUWXe7I5t8GMumxSFzM/wW1qiyoAXqNjKF8r8JPnFsJ5PZ3Wy3sMA++x1Rppw==}
+    cpu: [arm64, x64]
+    os: [darwin, linux]
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@oven/bun-darwin-aarch64': 1.0.13
+      '@oven/bun-darwin-x64': 1.0.13
+      '@oven/bun-darwin-x64-baseline': 1.0.13
+      '@oven/bun-linux-aarch64': 1.0.13
+      '@oven/bun-linux-x64': 1.0.13
+      '@oven/bun-linux-x64-baseline': 1.0.13
+    dev: false
 
   /cac@6.7.14:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
@@ -1730,6 +1826,14 @@ packages:
       ansi-styles: 5.2.0
       react-is: 18.2.0
     dev: true
+
+  /prisma@5.6.0:
+    resolution: {integrity: sha512-EEaccku4ZGshdr2cthYHhf7iyvCcXqwJDvnoQRAJg5ge2Tzpv0e2BaMCp+CbbDUwoVTzwgOap9Zp+d4jFa2O9A==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.6.0
 
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}

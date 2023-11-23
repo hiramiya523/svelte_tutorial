@@ -20,6 +20,6 @@ export const load = (() => {
         favorite: false
       }
     ]
-  }
+  } as { snippets: CodeSnippet[] };
   // ロード関数が返すべきデータの型: PageLoad
 }) satisfies PageLoad; // PageLoad -> PageData(in our frontend)
